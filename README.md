@@ -7,7 +7,7 @@ What social problem is being addressed?
 
 Who is being empowered by your mapplication?
 
-  *Low-income UCLA students; by making income differences among students more transparent, the student body as a whole will hopefully be more likely to favor increasing aid to low-income students. 
+  *Low-income UCLA students; by making income differences among students more transparent, the student body as a whole will hopefully be more likely to favor increasing aid to students in need. 
   
 What technical and ethical problems could there be in developing this tool?
 
