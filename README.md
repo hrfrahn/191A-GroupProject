@@ -13,7 +13,7 @@ What technical and ethical problems could there be in developing this tool?
 
   *Privacy of Respondents
   *Getting enough respondents from different economic backgrounds
-  *Wording the questions so financially insecure students don't feel ashamed
+  *Wording the questions so financially insecure students don't feel shamed
   *Contextualizing the responses within a map
   
  We're planning to reach out Good Clothes, Good People at UCLA (an on-campus org that provides essentials to students in need) for data about student needs. https://goodclothesgoodpeople.org/
