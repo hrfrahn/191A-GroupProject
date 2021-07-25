@@ -39,5 +39,5 @@ fetch(url)
 function addObjMarker(data){
     console.log(data.lat)
     console.log(data.lng)
-    L.marker([data.lat, data.lng]).addTo(myMap)
+    L.marker([data.lat, data.lng]).addTo(myMap).bindPopup(`<h3>Location: ${data.locationatthestartofwinterquarter2020}</h3>`)
 }    
