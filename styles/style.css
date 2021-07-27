@@ -1,8 +1,14 @@
+body{
+    background-color: #F4F1DE;
+}
 #header{
     text-align: center;
     font-size: 40px;
     border-bottom-style: groove;
-    border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #F2CC8F;
+    color: #292B3D;
 }
 #subheader{
     text-align: center;
@@ -15,8 +21,30 @@
 #mapArea{
     height: 70vh;
 }
+#sidebar{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "buttons buttons" "lowIncome lowIncome" "covid covid" "ucla ucla";
+    row-gap: 1ch;
+}
 #buttons{
     display: grid;
+    grid-area: buttons;
     grid-template-columns: 1fr;
-    height: 20vh;
+    overflow-y: auto;
+}
+#lowIncomeResponse{
+    grid-area: lowIncome;    
+}
+#covidAffectResponse{
+    grid-area: covid;
+}
+#uclaHelpResponse{
+    grid-area: ucla;
+}
+.response{
+    text-align: center; 
+    border: black;
+    border-style: solid;
+    border-radius: 5px;
 }
