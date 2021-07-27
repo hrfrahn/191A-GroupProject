@@ -16,22 +16,28 @@ body{
 #wrapper{
     display: grid;
     grid-template-columns: 1fr .5fr;
+    column-gap: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 #mapArea{
-    height: 70vh;
+    height: 60vh;
 }
 #sidebar{
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-areas: "buttons buttons" "lowIncome lowIncome" "covid covid" "ucla ucla";
-    row-gap: 1ch;
+    /* display: grid;
+    grid-template-rows: auto; */
+    /* grid-template-areas: "buttons buttons" "lowIncome lowIncome" "covid covid" "ucla ucla"; */
+    /* row-gap: 1ch; */
 }
 #buttons{
     display: grid;
     grid-area: buttons;
     grid-template-columns: 1fr;
     overflow-y: auto;
+    height: 100%;
+    /* width: 50%; */
+    
 }
 #lowIncomeResponse{
     grid-area: lowIncome;    
@@ -42,9 +48,20 @@ body{
 #uclaHelpResponse{
     grid-area: ucla;
 }
+#responseBoxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "lowIncome covid ucla";
+    column-gap: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
 .response{
     text-align: center; 
     border: black;
     border-style: solid;
     border-radius: 5px;
+    border-width: 2px;
+    max-height: 150px;
+    overflow-y: auto;
 }
