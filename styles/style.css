@@ -1,3 +1,22 @@
+#header{
+    text-align: center;
+    font-size: 40px;
+    border-bottom-style: groove;
+    border-radius: 15px;
+}
+#subheader{
+    text-align: center;
+}
+#wrapper{
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+}
+
 #mapArea{
-    height: 90vh;
+    height: 70vh;
+}
+#buttons{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 20vh;
 }
