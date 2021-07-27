@@ -69,6 +69,19 @@ function addObjMarker(data){
     console.log(data.location)
     myMarker.addTo(myMap).bindPopup(`<h3>Location: ${data.location}</h3><h4>${data.timestamp}</h4>`)
     createButtons(data.lat, data.lng, data.location, myMarker._leaflet_id)
+    
+    myMarker.on('click', clearAnswers)
+
+    //this is trying to update the answer boxes when the marker is clicked; for some reason, 
+    //it only updates to the responses from the last marker (index 9) no matter what's clicked
+
+    // myMarker.on('click', function(){
+    //   console.log(myMarker._leaflet_id)
+    //   let index = getMarker(myMarker._leaflet_id)
+    //   //console.log(index)
+    //   updateAnswers(index)
+    // })
+
     markers.push(myMarker)
 }    
 
