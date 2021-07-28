@@ -11,10 +11,13 @@
 
         <!-- Leaflet's JavaScript-->
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     </head>
     <body>
         <div id = "header">
-            How Did The Pandemic Affect Student Income at UCLA?
+            <b>How Did The Pandemic Affect Student Income at UCLA?</b>
+            <p style="font-size: 18px; ">by Harry Frahn & Sarah Perez</p>
         </div>
         <br>
         <div id = "subheader">
@@ -33,8 +36,13 @@
         <div id = "wrapper">
             <div id = "mapArea"></div>
             <div id = "sidebar">
+                <div id = "buttonHeader"><b>Click To See Student Responses</b></div>
                 <div id = "buttons"></div>
-                
+                <div id = "chart" style="height: 25vh; width: 100%;"><b>Summary Charts:</b> 
+                        <canvas id = "pieChart"></canvas>
+                        <canvas id = "workChart"></canvas>
+                    
+                </div>
             </div>
         </div>
         <br>
@@ -43,6 +51,7 @@
             <div class = "response" id = "covidAffectResponse"><h4>How did the COVID-19 pandemic affect you financially while in school?</h4></div>
             <div class = "response" id = "uclaHelpResponse"><h4>What could UCLA have done to better help you during the pandemic?</h4></div>
         </div>
+        <div id = "footer">Add footer text (list of orgs to contact?)</div>
         <script src="scripts/init.js"></script>
     </body>
 </html>

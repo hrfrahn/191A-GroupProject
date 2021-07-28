@@ -4,6 +4,7 @@ body{
 #header{
     text-align: center;
     font-size: 40px;
+    padding-top: 10px;
     border-bottom-style: groove;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -22,13 +23,15 @@ body{
 }
 
 #mapArea{
-    height: 60vh;
+    height: 80vh;
 }
 #sidebar{
-    /* display: grid;
-    grid-template-rows: auto; */
-    /* grid-template-areas: "buttons buttons" "lowIncome lowIncome" "covid covid" "ucla ucla"; */
-    /* row-gap: 1ch; */
+    display: grid;
+    grid-template-rows: .1fr .5fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "buttonHeader buttonHeader" "buttons buttons" "chart chart";
+    row-gap: 1ch;
+    height: 60vh;
 }
 #buttons{
     display: grid;
@@ -64,4 +67,17 @@ body{
     border-width: 2px;
     max-height: 150px;
     overflow-y: auto;
+}
+#buttonHeader{
+    font-size: 20px;
+    text-align: center;
+    grid-area: buttonHeader;
+}
+#chart{
+    grid-area: chart;
+    text-align: center;
+    font-size: 20px;
+}
+#footer{
+    text-align: center;
 }

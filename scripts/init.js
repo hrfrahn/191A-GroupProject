@@ -16,6 +16,8 @@ fetch(url)
     })
 
 let data = []
+let finAid = 0;
+let work = 0;
 
 function processData(theData){
         const formattedData = [] /* this array will eventually be populated with the contents of the spreadsheet's rows */
@@ -38,6 +40,10 @@ function processData(theData){
         // we can actually add functions here too
         formattedData.forEach(addObjMarker)
         console.log(markers)
+        finAid = countFinAid()
+        work = countWork()
+        makePieChart()
+        makeWorkChart()
 
 }
 function createButtons(lat,lng,title,leafletId){
@@ -56,6 +62,9 @@ function createButtons(lat,lng,title,leafletId){
         //update open response boxes to show corresponding answers
         clearAnswers()
         updateAnswers(x)
+        //make sure boxes are in view
+        const footer = document.getElementById('footer')
+        footer.scrollIntoView(false)
     })
     const spaceForButtons = document.getElementById('buttons')
     spaceForButtons.appendChild(newButton);
@@ -112,4 +121,69 @@ function clearAnswers(){
   covidResponse.innerHTML = "<h4>How did the COVID-19 pandemic affect you financially while in school?</h4>"
   let uclaHelp = document.getElementById("uclaHelpResponse")
   uclaHelp.innerHTML = "<h4>What could UCLA have done to better help you during the pandemic?</h4>"
+}
+
+function makePieChart(){
+  new Chart(document.getElementById('pieChart'), {
+  type: 'pie', 
+  data: {
+    labels: ["Yes", "No"],
+    datasets: [{
+      label: "Students Responding",
+      backgroundColor: ["#3e95cd", "#8e5ea2"],
+      data: [finAid, data.length-finAid]
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Do You Recieve Financial Aid from UCLA?'
+    },
+    responsive: true,
+    maintainAspectRatio: false
+  }
+})
+}
+function makeWorkChart(){
+  new Chart(document.getElementById('workChart'), {
+    type: 'pie', 
+    data: {
+      labels: ["Yes", "No"],
+      datasets: [{
+        label: "Students Responding",
+        backgroundColor: ["#3e95cd", "#8e5ea2"],
+        data: [work, data.length-work]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Do You Work To Pay For Tuition/Other Expenses?'
+      },
+      responsive: true,
+      maintainAspectRatio: false
+    }
+  })
+}
+
+
+function countFinAid(){
+  let x = 0
+  for(let i = 0; i < data.length; i++){
+    if(data[i].finaid == "Yes"){
+      x++
+    }
+  }
+  console.log(x)
+  return x
+}
+function countWork(){
+  let x = 0
+  for(let i = 0; i < data.length; i++){
+    if(data[i].work == "Yes"){
+      x++
+    }
+  }
+  console.log(x)
+  return x
 }
