@@ -1,5 +1,5 @@
 body{
-    background-color: #F4F1DE;
+    background-color: #a4dfe7e7;
 }
 #header{
     text-align: center;
@@ -8,7 +8,7 @@ body{
     border-bottom-style: groove;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #F2CC8F;
+    background-color: #3d92e2be;
     color: #292B3D;
 }
 #subheader{
