@@ -62,9 +62,7 @@ function createButtons(lat,lng,title,leafletId){
         //update open response boxes to show corresponding answers
         clearAnswers()
         updateAnswers(x)
-        //make sure boxes are in view
-        const footer = document.getElementById('footer')
-        footer.scrollIntoView(false)
+       
     })
     const spaceForButtons = document.getElementById('buttons')
     spaceForButtons.appendChild(newButton);
