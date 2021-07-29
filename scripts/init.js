@@ -74,7 +74,7 @@ function addObjMarker(data){
     // console.log(data.lng)
     myMarker = L.marker([data.lat, data.lng])
     console.log(data.location)
-    myMarker.addTo(myMap).bindPopup(`<h3>Location: ${data.location}</h3><h4>${data.timestamp}</h4>`)
+    myMarker.addTo(myMap).bindPopup(`<h3>Location: ${data.location}</h3><h4>Housing Status: ${data.housing}<br>On Financial Aid: ${data.finaid}<br>Works To Pay For Expenses: ${data.work}<br>Fiancially Independent From Parents: ${data.independent}</h4>`)
     createButtons(data.lat, data.lng, data.location, myMarker._leaflet_id)
     
     myMarker.on('click', clearAnswers)
