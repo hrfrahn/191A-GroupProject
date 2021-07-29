@@ -12,7 +12,9 @@ body{
     color: #292B3D;
 }
 #subheader{
-    text-align: center;
+    
+    display: grid;
+    grid-template-columns: 1.5fr .5fr;
 }
 #wrapper{
     display: grid;
@@ -20,13 +22,16 @@ body{
     column-gap: 1%;
     padding-left: 2%;
     padding-right: 2%;
+    grid-template-areas: "sidebar map response";
 }
 
 #mapArea{
     height: 80vh;
+    grid-area: "map";
 }
 #sidebar{
     display: grid;
+    grid-area: "sidebar";
     grid-template-rows: .1fr .5fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: "buttonHeader buttonHeader" "buttons buttons" "chart chart";
@@ -37,6 +42,7 @@ body{
     display: grid;
     grid-area: "buttons";
     grid-template-columns: 1fr;
+    row-gap: 1%;
     overflow-y: auto;
     height: 100%;
     /* width: 50%; */
@@ -51,6 +57,9 @@ body{
 #uclaHelpResponse{
     grid-area: ucla;
 }
+#responseBoxes{
+    grid-area: "response";
+}
 .response{
     text-align: center; 
     border: black;
@@ -60,6 +69,8 @@ body{
     min-height: 20%px;
     max-height: 250px;
     overflow-y: auto;
+    padding: 5px;
+
 }
 #buttonHeader{
     font-size: 20px;

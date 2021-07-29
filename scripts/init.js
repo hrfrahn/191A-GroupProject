@@ -114,11 +114,11 @@ function updateAnswers(index){
 
 function clearAnswers(){
   let lowIncome = document.getElementById("lowIncomeResponse")
-  lowIncome.innerHTML = "<h4>Do you consider yourself to be low-income?</h4>"
+  lowIncome.innerHTML = "<b>Do you consider yourself to be low-income?</b><br><br>"
   let covidResponse = document.getElementById("covidAffectResponse")
-  covidResponse.innerHTML = "<h4>How did the COVID-19 pandemic affect you financially while in school?</h4>"
+  covidResponse.innerHTML = "<b>How did the COVID-19 pandemic affect you financially while in school?</b><br><br>"
   let uclaHelp = document.getElementById("uclaHelpResponse")
-  uclaHelp.innerHTML = "<h4>What could UCLA have done to better help you during the pandemic?</h4>"
+  uclaHelp.innerHTML = "<b>What could UCLA have done to better help you during the pandemic?</b><br><br>"
 }
 
 function makePieChart(){
