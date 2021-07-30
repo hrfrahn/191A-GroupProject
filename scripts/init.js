@@ -149,7 +149,7 @@ function makeWorkChart(){
       labels: ["Yes", "No"],
       datasets: [{
         label: "Students Responding",
-        backgroundColor: ["#dfc27d", "#018571"],
+        backgroundColor: ["#dfc27d", "#bdc9e1"],
         data: [work, data.length-work]
       }]
     },
