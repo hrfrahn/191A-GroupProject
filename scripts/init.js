@@ -1,8 +1,8 @@
 const myMap = L.map('mapArea').setView([34.0709, -118.444], 5);
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+L.tileLayer('https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png?api_key= a24be9fc-705d-41eb-9757-fb8ab346d710', {
 	maxZoom: 20,
 	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-});addTo(myMap)
+}).addTo(myMap)
 
 let markers = []
 let url = "https://spreadsheets.google.com/feeds/list/103F2d_EByUYXhi0SdjDdeSvjsuYzOLY7wFKFI7P02xU/ogaq09/public/values?alt=json"
