@@ -16,5 +16,18 @@
   * Wording the questions so financially insecure students don't feel shamed
   * Contextualizing the responses within a map
   
+## What technology was used for the project?
+ 
+  * Javascript
+  * Google Forms
+  * Google Sheets
+  * Leaflet
+
+## How can others use our mapplication in the future?
+
+  * Students can continue to share their experiences/needs
+  * On campus organizations that offer assistance can see what students need
+  * Institutions like UCLA can learn about how they can meet students needs better
+  
  We're planning to reach out Good Clothes, Good People at UCLA (an on-campus org that provides essentials to students in need) for data about student needs. https://goodclothesgoodpeople.org/
   
