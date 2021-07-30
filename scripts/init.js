@@ -185,3 +185,33 @@ function countWork(){
   console.log(x)
   return x
 }
+let modal = document.getElementById('background-popup')
+let btn = document.getElementById('openModal')
+let close = document.getElementsByClassName('close')[0]
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+close.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+let resourceModal = document.getElementById('resource-popup')
+let resourceBtn = document.getElementById('openResources')
+let closeResources = document.getElementsByClassName('close')[1]
+
+resourceBtn.onclick = function(){
+  resourceModal.style.display = "block";
+}
+closeResources.onclick = function() {
+  resourceModal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == resourceModal) {
+    resourceModal.style.display = "none";
+  }
+}

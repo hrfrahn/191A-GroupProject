@@ -18,6 +18,43 @@
         <div id = "header">
             <b>How Did The Pandemic Affect Student Income at UCLA?</b>
             <div style="font-size: 18px; ">by Harry Frahn & Sara Perez</div>
+            <button id = "openModal">Read Project Background</button>
+            <input type="button" onclick="location.href='https://forms.gle/fY2Kd728WeuTkad57';" value="Take The Survey!" style="font-family:Open Sans"/>
+            <button id = "openResources">Student Resources</button>
+            <div id = "background-popup" class = "modal">
+                <div class="background-content">
+                    <span class="close">&times;</span>
+                    <div style="font-size:initial">
+                        <div style="text-align: center;"><b style="font-size: 20px;">Project Background:</b><br></div>
+                        <div style="text-indent: 20px; font-family: Open Sans;"> In spring quarter 2021, USAC held an election which included a referendum known as the Bruin Emergency Relief Fund. 
+                        BERF aimed to “increase undergraduate student fees by $2 per quarter to create an emergency fund for natural disasters, 
+                        medical costs, legal costs, housing and food insecurity.” This referendum failed to pass. While there were many reasons for this result, it seems that one 
+                        contributing factor was the lack of awareness that many Bruins have about the financial situation and struggles of their
+                        low-income peers. Students are often left to suffer the burdens of financial insecurity alone with little to no support from their peers 
+                        or UCLA as an institution. Feeling left out or being excluded solely because of one's financial situation should not be an 
+                        additional barrier that students face at a public institution like UCLA, which recently completed a more than <a href="https://newsroom.ucla.edu/releases/centennial-campaign-for-ucla-closing-success">$5 billion</a> 
+                        fundraising push. On top of the issues already facing low-income students, the COVID-19 pandemic worsened issues for many students, 
+                        especially financial issues. Remote learning requires access to resources the university had available on campus, but 
+                        were now unavailable due to relocation. </div>
+                        <br>
+                        <div style="text-indent:20px;font-family: Open Sans;">We're trying to tackle the issue of low awareness by allowing Bruins to share how they struggled during the pandemic, 
+                        and what UCLA could have better done to meet their needs. We've mapped out their responses, and also included relevant information
+                        such as if they recieve financial aid, if they work to pay for school, and if they're financially independent. We also included several
+                        open-response questions to allow students to truly express their needs and how UCLA can do better. </div>
+                    </div>
+                </div>
+            </div>
+            <div id = "resource-popup" class ="modal" style="font-size: initial;">
+                <div class ="resource-content">
+                    <span class="close">&times;</span>
+                    <b style="font-size:20px;">Resources For Students In Need</b>
+                    <br><br>
+                    <li><a href="https://goodclothesgoodpeople.org/">Good Clothes Good People</a></li>
+                    <br>
+                    <li><a href="https://studentincrisis.ucla.edu/economic-crisis-response">UCLA Economic Crisis Response Team</a></li>
+                    <br>
+                </div>
+            </div>
         </div>
        
         <div style="text-align: center; font-size: 30px;margin: 1%;"><b>Student Responses, Mapped</b> <br></div>
@@ -47,39 +84,6 @@
             </div>
         </div>
         <br>
-        <div id = "subheader">
-            <div>
-                <div style="text-align: center;"><b style="font-size: 20px;">Project Background:</b><br></div>
-                <div style="text-indent: 20px; font-family: Open Sans;"> In spring quarter 2021, USAC held an election which included a referendum known as the Bruin Emergency Relief Fund. 
-            BERF aimed to “increase undergraduate student fees by $2 per quarter to create an emergency fund for natural disasters, 
-            medical costs, legal costs, housing and food insecurity.” This referendum failed to pass. While there were many reasons for this result, it seems that one 
-            contributing factor was the lack of awareness that many Bruins have about the financial situation and struggles of their
-            low-income peers. Students are often left to suffer the burdens of financial insecurity alone with little to no support from their peers 
-            or UCLA as an institution. Feeling left out or being excluded solely because of one's financial situation should not be an 
-            additional barrier that students face at a public institution like UCLA, which recently completed a more than <a href="https://newsroom.ucla.edu/releases/centennial-campaign-for-ucla-closing-success">$5 billion</a> 
-            fundraising push. On top of the issues already facing low-income students, the COVID-19 pandemic worsened issues for many students, 
-            especially financial issues. Remote learning requires access to resources the university had available on campus, but 
-            were now unavailable due to relocation. </div>
-            <br>
-                <div style="text-indent:20px;font-family: Open Sans;">We're trying to tackle the issue of low awareness by allowing Bruins to share how they struggled during the pandemic, 
-                and what UCLA could have better done to meet their needs. We've mapped out their responses, and also included relevant information
-                such as if they recieve financial aid, if they work to pay for school, and if they're financially independent. We also included several
-                open-response questions to allow students to truly express their needs and how UCLA can do better. </div>
-            </div>
-            <div id = "footer">
-                <b style="font-size:20px;">Resources For Students</b>
-                <br><br>
-                <li><a href="https://goodclothesgoodpeople.org/">Good Clothes Good People</a></li>
-                <br>
-                <li><a href="https://studentincrisis.ucla.edu/economic-crisis-response">UCLA Economic Crisis Response Team</a></li>
-                <br>
-                <div style="margin-left: auto; margin-right: auto;">
-                    <input type="button" onclick="location.href='https://forms.gle/fY2Kd728WeuTkad57';" value="Take The Survey!" style="font-size: 100%; ; font-weight: bold;"/>
-                </div>
-             </div>
-            
-        </div>
-        
         <script src="scripts/init.js"></script>
     </body>
 </html>
