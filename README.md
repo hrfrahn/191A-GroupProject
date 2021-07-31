@@ -51,7 +51,7 @@ Clicking on the "Student Resources" modal shows you a few resources we have foun
 
 ![Screenshot (54)](https://user-images.githubusercontent.com/86337626/127725960-10410f5b-93a7-4d7d-a4f0-3cd01254b895.png)
 
-The "Click To See Student Responses" section has all the responses submitted by location. By clicking on any location, for instance Pasadena, CA, the map responds by zooming in to that area. The marker then shows some of the responses to certain questions submitted by that individual and on the far right of the mapplication under "Student Open Responses," you can see their response to the questions listed. 
+The "Click To See Student Responses" section has all the responses submitted by location. By clicking on any location, for instance Pasadena, CA, the map responds by zooming in to that area. The marker then shows some of the responses to certain questions submitted by that individual. On the far right of the mapplication under "Student Open Responses," you can see their response to the open-ended questions listed. 
 
 ![Screenshot (55)](https://user-images.githubusercontent.com/86337626/127725964-3c3324b1-3519-4e18-bbe2-1b93206aa1b5.png)
 
