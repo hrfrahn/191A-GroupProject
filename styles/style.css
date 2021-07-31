@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn&family=Open+Sans&display=swap');
 body{
-    background-color: #d4dfaefa;
+    background-color: #91b2ce;
     font-family: Vollkorn;
 }
 #header{
@@ -11,7 +11,7 @@ body{
     border-bottom-style: groove;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #b2c4d6f1;
+    background-color: #9ac6ebf8;
     color: #292B3D;
 }
 #subheader{
