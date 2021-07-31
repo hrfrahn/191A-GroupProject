@@ -38,9 +38,10 @@ How can others use our mapplication in the future?
 
 Our mapplication offers an interactive layout
 
-<img src= "Screenshot (51)_Ll.jpg">
-<img src= "Screenshot (52).png">
-  Clicking on "Read Project Background" allows you to read the project background in a modal which is like a pop up.
+![Screenshot (51)_LI](https://user-images.githubusercontent.com/86337626/127725903-e7dc4f5d-d9f8-47ff-8e91-dd94a97d8985.jpg)
+![Screenshot (52)](https://user-images.githubusercontent.com/86337626/127725919-1066614f-e814-4103-8019-f6ca54c154a9.png) 
+
+Clicking on "Read Project Background" allows you to read the project background in a modal which is like a pop up.
 
 <img src= "Screenshot (52)_Ll.jpg">
 <img src= "Screenshot (53).png">
