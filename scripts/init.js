@@ -128,7 +128,7 @@ function makePieChart(){
     labels: ["Yes", "No"],
     datasets: [{
       label: "Students Responding",
-      backgroundColor: ["#66c2a4", "#8c96c6"],
+      backgroundColor: ["#4c9187", "#d6c49a"],
       data: [finAid, data.length-finAid]
     }]
   },
@@ -149,7 +149,7 @@ function makeWorkChart(){
       labels: ["Yes", "No"],
       datasets: [{
         label: "Students Responding",
-        backgroundColor: ["#dfc27d", "#bdc9e1"],
+        backgroundColor: ["#9e9ac8", "#bdd7e7"],
         data: [work, data.length-work]
       }]
     },
