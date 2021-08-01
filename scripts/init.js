@@ -44,6 +44,12 @@ function processData(theData){
         work = countWork()
         makePieChart()
         makeWorkChart()
+        for(let i = 0; i < markers.length; i++){
+          markers[i].on('click', function(){
+            let index = getMarker(markers[i]._leaflet_id)
+            updateAnswers(index)
+          })
+        }
 
 }
 function createButtons(lat,lng,title,leafletId){
@@ -62,7 +68,7 @@ function createButtons(lat,lng,title,leafletId){
         //update open response boxes to show corresponding answers
         clearAnswers()
         updateAnswers(x)
-       
+      
     })
     const spaceForButtons = document.getElementById('buttons')
     spaceForButtons.appendChild(newButton);
@@ -82,19 +88,13 @@ function addObjMarker(data){
     //this is trying to update the answer boxes when the marker is clicked; for some reason, 
     //it only updates to the responses from the last marker (index 9) no matter what's clicked
 
-    // myMarker.on('click', function(){
-    //   console.log(myMarker._leaflet_id)
-    //   let index = getMarker(myMarker._leaflet_id)
-    //   //console.log(index)
-    //   updateAnswers(index)
-    // })
-
     markers.push(myMarker)
 }    
 
 function getMarker(id){
   let x = 0;
   for(let i = 0; i < markers.length; i++){
+    console.log(markers[i]._leaflet_id)
     if(markers[i]._leaflet_id == id){
       x = i
     }
