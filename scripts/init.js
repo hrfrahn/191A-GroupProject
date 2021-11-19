@@ -5,40 +5,53 @@ L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.pn
 }).addTo(myMap)
 
 let markers = []
-let url = "https://spreadsheets.google.com/feeds/list/103F2d_EByUYXhi0SdjDdeSvjsuYzOLY7wFKFI7P02xU/ogaq09/public/values?alt=json"
-fetch(url)
-	.then(response => {
-		return response.json();
-		})
-    .then(data =>{
-        //console.log(data)
-        processData(data)
-    })
 
-let data = []
+
+
+Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vSyjx013gMpS7LEtIprN_33aQklJ0RzrMmXBHwgZkC-w31J_VZc3EkX9hxsfSqEz94mhv3jiiOL39vT/pub?output=csv", {
+    download: true,
+    header: true,
+    complete: (results) => {
+        const data = results.data;
+        console.log(data);
+        processData(data)
+    }
+});
+
+let data = [];
+
+
 let finAid = 0;
 let work = 0;
 
+
+
+
+
+
+
 function processData(theData){
-        const formattedData = [] /* this array will eventually be populated with the contents of the spreadsheet's rows */
-        const rows = theData.feed.entry // this is the weird Google Sheet API format we will be removing
-        // we start a for..of.. loop here 
-        for(const row of rows) { 
-          const formattedRow = {}
-          for(const key in row) {
-            // time to get rid of the weird gsx$ format...
-            if(key.startsWith("gsx$")) {
-                  formattedRow[key.replace("gsx$", "")] = row[key].$t
-            }
-          }
-          // add the clean data
-          formattedData.push(formattedRow)
-        }
-        // lets see what the data looks like when its clean!
-        console.log(formattedData)
-        data = formattedData
+        // const formattedData = [] /* this array will eventually be populated with the contents of the spreadsheet's rows */
+        // const rows = theData.feed.entry // this is the weird Google Sheet API format we will be removing
+        // // we start a for..of.. loop here 
+        // for(const row of rows) { 
+        //   const formattedRow = {}
+        //   for(const key in row) {
+        //     // time to get rid of the weird gsx$ format...
+        //     if(key.startsWith("gsx$")) {
+        //           formattedRow[key.replace("gsx$", "")] = row[key].$t
+        //     }
+        //   }
+        //   // add the clean data
+        //   formattedData.push(formattedRow)
+        // }
+        // // lets see what the data looks like when its clean!
+        // console.log(formattedData)
+        data = theData
+        console.log(data)
+        console.log("hello")
         // we can actually add functions here too
-        formattedData.forEach(addObjMarker)
+        theData.forEach(addObjMarker)
         console.log(markers)
         finAid = countFinAid()
         work = countWork()
@@ -105,11 +118,11 @@ function getMarker(id){
 
 function updateAnswers(index){
   let lowIncome = document.getElementById("lowIncomeResponse")
-  lowIncome.innerHTML += data[index].lowincome;
+  lowIncome.innerHTML += data[index].lowIncomeResponse;
   let covidResponse = document.getElementById("covidAffectResponse")
-  covidResponse.innerHTML += data[index].covidaffect;
+  covidResponse.innerHTML += data[index].covidAffectResponse;
   let uclaHelp = document.getElementById("uclaHelpResponse")
-  uclaHelp.innerHTML += data[index].uclahelp
+  uclaHelp.innerHTML += data[index].uclaHelpResponse
 }
 
 function clearAnswers(){
